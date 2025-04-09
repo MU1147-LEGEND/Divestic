@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 16px;
+  }
+  body {
+    @apply md:bg-[#252B42]
+  }
+}
+
+
+@layer components {
+  .link{
+    @apply hover:text-white/80;
+  }
+  .link::after{
+    @apply content-[''] block w-0 h-[2px] bg-white/20 transition-all duration-500 ease-in-out;
+  }
+  .link:hover::after{
+    @apply bg-white/80 w-full ;
+  }
+  .hero-bg{
+    @apply bg-[url('src/assets/hero-cover/mobile-cover.png')] md:bg-[url('src/assets/hero-cover/desktop-cover.png')] bg-cover bg-bottom bg-no-repeat;
+  }
+}
