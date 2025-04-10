@@ -11,6 +11,9 @@ import cardImageDesktop from "./assets/images/card-item-desktop.png";
 import { RiTeamLine } from "react-icons/ri";
 import { MdSpeed } from "react-icons/md";
 import person from "./assets/images/person.png";
+import teamCo from "./assets/images/team-co.png";
+import teamCEO from "./assets/images/team-ceo.png";
+
 
 const App = () => {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -343,7 +346,89 @@ const App = () => {
                                     </p>
                                 </div>
                             </div>
-                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* meet our team */}
+            <section
+                id="meet-our-team"
+                className="bg-[#16697A] text-white text-lg pb-20"
+            >
+                <div className="w-10/12 m-auto pt-10">
+                    <div className="head-slogan text-center">
+                        <h2 className="inline-block w-1/2 text-[2rem] md:text-6xl font-semibold md:mt-28 mb-8 text-center leading-normal">
+                            Meet Our Team
+                        </h2>
+                        <p className="w-3/4 m-auto pb-8">
+                            Problems trying to resolve the conflict between the
+                            two major realms of Classical physics: Newtonian
+                            mechanics{" "}
+                        </p>
+                    </div>
+                    <div className="testimonial-cards w-full">
+                        <div className="carousel carousel-center space-x-4 rounded-box w-full">
+                            <div className="carousel-item flex flex-col justify-center items-center w-[80vw]  max-w-xl text-black bg-white py-6 px-4 rounded-xl shadow-md">
+                                <img
+                                    src={teamCo}
+                                    className="w-[200px] h-[200px] rounded-full object-cover"
+                                    alt="Tailwind CSS Carousel component"
+                                />
+                                <div className="text-center">
+                                    <h4 className="text-[#FFA62B] mt-3 font-semibold">
+                                        CO Founder
+                                    </h4>
+                                    <h3 className="text-3xl font-bold py-2">
+                                        Avie Beaton
+                                    </h3>
+                                    <p>Designer</p>
+                                    <p className="py-4">⭐⭐⭐⭐⭐</p>
+                                    <p className="text-base opacity-65 max-w-md mx-auto">
+                                        the quick fox jumps over the lazy dog
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="carousel-item flex flex-col justify-center items-center w-[80vw] max-w-xl text-black bg-white py-6 px-4 rounded-xl shadow-md">
+                                <img
+                                    src={teamCEO}
+                                    className="w-[200px] h-[200px] rounded-full object-cover"
+                                    alt="Tailwind CSS Carousel component"
+                                />
+                                <div className="text-center">
+                                    <h4 className="text-[#FFA62B] mt-3 font-semibold">
+                                        CEO
+                                    </h4>
+                                    <h3 className="text-3xl font-bold py-2">
+                                        Ashley Fletcher
+                                    </h3>
+                                    <p>Designer</p>
+                                    <p className="py-4">⭐⭐⭐⭐⭐</p>
+                                    <p className="text-base opacity-65 max-w-md mx-auto">
+                                        the quick fox jumps over the lazy dog
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="carousel-item flex flex-col justify-center items-center w-[80vw] max-w-xl text-black bg-white py-6 px-4 rounded-xl shadow-md">
+                                <img
+                                    src={teamCo}
+                                    className="w-[200px] h-[200px] rounded-full object-cover"
+                                    alt="Tailwind CSS Carousel component"
+                                />
+                                <div className="text-center">
+                                    <h4 className="text-[#FFA62B] mt-3 font-semibold">
+                                        CO Founder
+                                    </h4>
+                                    <h3 className="text-3xl font-bold py-2">
+                                        Avie Beaton
+                                    </h3>
+                                    <p>Designer</p>
+                                    <p className="py-4">⭐⭐⭐⭐⭐</p>
+                                    <p className="text-base opacity-65 max-w-md mx-auto">
+                                        the quick fox jumps over the lazy dog
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
