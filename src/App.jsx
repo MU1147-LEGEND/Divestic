@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { RiMenu3Fill } from "react-icons/ri";
@@ -10,9 +10,29 @@ import cardImage from "./assets/images/card-item.png";
 import cardImageDesktop from "./assets/images/card-item-desktop.png";
 import { RiTeamLine } from "react-icons/ri";
 import { MdSpeed } from "react-icons/md";
+import person from "./assets/images/person.png";
 
 const App = () => {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
+    useEffect(() => {
+        const carousel = document.querySelector(".testimonial-cards .carousel");
+        let scrollAmount = 0;
+        const slideWidth = carousel.offsetWidth;
+
+        const autoplay = setInterval(() => {
+            if (carousel.scrollLeft + slideWidth >= carousel.scrollWidth) {
+                // Go back to start
+                carousel.scrollTo({ left: 0, behavior: "smooth" });
+                scrollAmount = 0;
+            } else {
+                scrollAmount += slideWidth;
+                carousel.scrollTo({ left: scrollAmount, behavior: "smooth" });
+            }
+        }, 1000); // Change every 1 second
+
+        return () => clearInterval(autoplay); // Cleanup on unmount
+    }, []);
+
     return (
         <>
             <header className="bg-[#252B42] py-5 text-white">
@@ -236,7 +256,7 @@ const App = () => {
             {/* what clients say */}
             <section
                 id="what-clients-say"
-                className="bg-[#16697A] text-white text-lg"
+                className="bg-[#16697A] text-white text-lg pb-20"
             >
                 <div className="w-10/12 m-auto pt-10">
                     <div className="head-slogan text-center">
@@ -250,10 +270,50 @@ const App = () => {
                         </p>
                     </div>
                     <div className="testimonial-cards">
+                        <div className="carousel relative rounded-box">
+                            <div className="carousel-item w-full text-black bg-white">
+                                <img
+                                    src={person}
+                                    className="w-[100px] h-[100px] rounded-full relative top-8 space-x-3"
+                                    alt="Tailwind CSS Carousel component"
+                                />
+                                <div className="pl-4">
+                                    <h3 className="text-3xl font-bold py-2 pt-10">
+                                        Regina Miles
+                                    </h3>
+                                    <p>Designer</p>
+                                    <p className="py-4">⭐⭐⭐⭐⭐</p>
+                                    <p className="text-base opacity-65">
+                                        This proved to be impossible using the
+                                        traditional concepts of space and time.
+                                        Einstein developed a new view of time
+                                        first and then space. This proved to be
+                                        impossible using the traditional
+                                        concepts of space and time. Einstein
+                                        developed a new view of time first and
+                                        then space.
+                                    </p>
+                                </div>
+                            </div>
+                        
+                            <div className="carousel-item w-full">
+                                <img
+                                    src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
+                                    className="w-full"
+                                    alt="Tailwind CSS Carousel component"
+                                />
+                            </div>
+                            <div className="carousel-item w-full">
+                                <img
+                                    src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
+                                    className="w-full"
+                                    alt="Tailwind CSS Carousel component"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-                        <button class="btn btn-primary">Button</button>
         </>
     );
 };
