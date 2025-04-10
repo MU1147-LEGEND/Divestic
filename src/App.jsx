@@ -269,9 +269,9 @@ const App = () => {
                             mechanics{" "}
                         </p>
                     </div>
-                    <div className="testimonial-cards">
-                        <div className="carousel relative rounded-box">
-                            <div className="carousel-item w-full text-black bg-white">
+                    <div className="testimonial-cards w-full">
+                        <div className="carousel flex-row rounded-box">
+                            <div className="carousel-item w-full text-black bg-white py-4">
                                 <img
                                     src={person}
                                     className="w-[100px] h-[100px] rounded-full relative top-8 space-x-3"
@@ -283,7 +283,7 @@ const App = () => {
                                     </h3>
                                     <p>Designer</p>
                                     <p className="py-4">⭐⭐⭐⭐⭐</p>
-                                    <p className="text-base opacity-65">
+                                    <p className="text-base opacity-65 w-4/5">
                                         This proved to be impossible using the
                                         traditional concepts of space and time.
                                         Einstein developed a new view of time
@@ -295,21 +295,55 @@ const App = () => {
                                     </p>
                                 </div>
                             </div>
-                        
-                            <div className="carousel-item w-full">
+                            <div className="carousel-item w-full text-black bg-white py-4">
                                 <img
-                                    src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
-                                    className="w-full"
+                                    src={person}
+                                    className="w-[100px] h-[100px] rounded-full relative top-8 space-x-3"
                                     alt="Tailwind CSS Carousel component"
                                 />
+                                <div className="pl-4">
+                                    <h3 className="text-3xl font-bold py-2 pt-10">
+                                        Regina Miles
+                                    </h3>
+                                    <p>Designer</p>
+                                    <p className="py-4">⭐⭐⭐⭐⭐</p>
+                                    <p className="text-base opacity-65 w-4/5">
+                                        This proved to be impossible using the
+                                        traditional concepts of space and time.
+                                        Einstein developed a new view of time
+                                        first and then space. This proved to be
+                                        impossible using the traditional
+                                        concepts of space and time. Einstein
+                                        developed a new view of time first and
+                                        then space.
+                                    </p>
+                                </div>
                             </div>
-                            <div className="carousel-item w-full">
+                            <div className="hidden md:flex carousel-item w-full text-black bg-white py-4">
                                 <img
-                                    src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-                                    className="w-full"
+                                    src={person}
+                                    className="w-[100px] h-[100px] rounded-full relative top-8 space-x-3"
                                     alt="Tailwind CSS Carousel component"
                                 />
+                                <div className="pl-4">
+                                    <h3 className="text-3xl font-bold py-2 pt-10">
+                                        Regina Miles
+                                    </h3>
+                                    <p>Designer</p>
+                                    <p className="py-4">⭐⭐⭐⭐⭐</p>
+                                    <p className="text-base opacity-65 w-4/5">
+                                        This proved to be impossible using the
+                                        traditional concepts of space and time.
+                                        Einstein developed a new view of time
+                                        first and then space. This proved to be
+                                        impossible using the traditional
+                                        concepts of space and time. Einstein
+                                        developed a new view of time first and
+                                        then space.
+                                    </p>
+                                </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
