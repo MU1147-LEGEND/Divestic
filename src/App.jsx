@@ -7,9 +7,9 @@ import desktopCover from "./assets/hero-cover/desktop-cover.png";
 import { MdOutlineBusinessCenter } from "react-icons/md";
 import { MdWeb } from "react-icons/md";
 import cardImage from "./assets/images/card-item.png";
+import cardImageDesktop from "./assets/images/card-item-desktop.png";
 import { RiTeamLine } from "react-icons/ri";
 import { MdSpeed } from "react-icons/md";
-
 
 const App = () => {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -163,25 +163,30 @@ const App = () => {
             </section>
             {/* we take care customers */}
             <section id="we-take-care" className="bg-[#252B42] text-white">
-                <div className="parent w-10/12 m-auto">
+                <div className="parent w-10/12 m-auto text-center">
                     <div className="head-slogan pb-8">
                         <h2 className="inline-block text-4xl md:text-6xl font-semibold mt-[25%] md:mt-28 mb-8 text-center leading-normal md:hidden">
                             We take care customers out all expert here.
                         </h2>
-                        <h2 className=" text-4xl md:text-6xl font-semibold mt-[25%] md:mt-28 mb-8 text-center leading-normal hidden md:inline-block">
+                        <h2 className="w-2/3 m-auto text-6xl font-semibold mt-28 mb-8 text-center leading-normal hidden md:inline-block">
                             We are providing best business service.
                         </h2>
-                        <p className=" text-lg w-4/5 m-auto text-center">
-                            Problems are trying to resolve the conflict between
-                            the two major realms of Classical physics; Newtonian
+                        <p className=" text-lg w-2/3 m-auto text-center">
+                            Problems trying to resolve the conflict between the
+                            two major realms of Classical physics: Newtonian
                             mechanics
                         </p>
                     </div>
-                    <div className="text-center p-3">
+                    <div className="flex flex-col md:flex-row md:gap-20 text-center p-3">
                         <img
                             src={cardImage}
                             alt="card-item"
-                            className="text-center m-auto"
+                            className="text-center m-auto md:hidden"
+                        />
+                        <img
+                            src={cardImageDesktop}
+                            alt="card-item"
+                            className="text-center m-auto hidden md:block"
                         />
                         <div className="most-trusted mt-16 pb-6 text-left">
                             <h2 className="text-4xl font-semibold w-4/5 mb-6">
@@ -228,6 +233,27 @@ const App = () => {
                     </div>
                 </div>
             </section>
+            {/* what clients say */}
+            <section
+                id="what-clients-say"
+                className="bg-[#16697A] text-white text-lg"
+            >
+                <div className="w-10/12 m-auto pt-10">
+                    <div className="head-slogan text-center">
+                        <h2 className="inline-block w-1/2 text-[2rem] md:text-6xl font-semibold md:mt-28 mb-8 text-center leading-normal">
+                            What Clients Say
+                        </h2>
+                        <p className="w-3/4 m-auto pb-8">
+                            Problems trying to resolve the conflict between the
+                            two major realms of Classical physics: Newtonian
+                            mechanics{" "}
+                        </p>
+                    </div>
+                    <div className="testimonial-cards">
+                    </div>
+                </div>
+            </section>
+                        <button class="btn btn-primary">Button</button>
         </>
     );
 };
