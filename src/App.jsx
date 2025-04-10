@@ -6,6 +6,10 @@ import mobileCover from "./assets/hero-cover/mobile-cover.png";
 import desktopCover from "./assets/hero-cover/desktop-cover.png";
 import { MdOutlineBusinessCenter } from "react-icons/md";
 import { MdWeb } from "react-icons/md";
+import cardImage from "./assets/images/card-item.png";
+import { RiTeamLine } from "react-icons/ri";
+import { MdSpeed } from "react-icons/md";
+
 
 const App = () => {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -114,7 +118,7 @@ const App = () => {
                     <h1 className="inline-block text-4xl md:text-5xl font-semibold mb-4 mt-20  w-3/5 md:w-1/2 leading-normal">
                         WHY CHOOSE US
                     </h1>
-                    <p className="inline-block w-11/12 md:w-2/5 mb-8">
+                    <p className="inline-block w-11/12 md:w-2/5 mb-8 text-lg">
                         Problems trying to resolve the conflict between the two
                         major realms of Classical physics Newtonian mechanics
                     </p>
@@ -160,15 +164,67 @@ const App = () => {
             {/* we take care customers */}
             <section id="we-take-care" className="bg-[#252B42] text-white">
                 <div className="parent w-10/12 m-auto">
-                    <div className="head-slogan">
-                        <h2 className="inline-block text-4xl md:text-6xl font-semibold mt-[25%] md:mt-28 mb-8 text-center leading-relaxed">
+                    <div className="head-slogan pb-8">
+                        <h2 className="inline-block text-4xl md:text-6xl font-semibold mt-[25%] md:mt-28 mb-8 text-center leading-normal md:hidden">
                             We take care customers out all expert here.
                         </h2>
-                        <p>
+                        <h2 className=" text-4xl md:text-6xl font-semibold mt-[25%] md:mt-28 mb-8 text-center leading-normal hidden md:inline-block">
+                            We are providing best business service.
+                        </h2>
+                        <p className=" text-lg w-4/5 m-auto text-center">
                             Problems are trying to resolve the conflict between
                             the two major realms of Classical physics; Newtonian
                             mechanics
                         </p>
+                    </div>
+                    <div className="text-center p-3">
+                        <img
+                            src={cardImage}
+                            alt="card-item"
+                            className="text-center m-auto"
+                        />
+                        <div className="most-trusted mt-16 pb-6 text-left">
+                            <h2 className="text-4xl font-semibold w-4/5 mb-6">
+                                Most trusted in our field
+                            </h2>
+                            <p className="text-lg pb-6">
+                                Most calendars are designed for teams. Slate is
+                                designed for freelancers who want a simple way
+                                to plan their schedule.
+                            </p>
+                            <div className="space-y-6 text-lg">
+                                <div className="flex gap-4">
+                                    <span>
+                                        {" "}
+                                        <RiTeamLine className="inline text-blue-400 text-3xl" />
+                                    </span>
+                                    <span>
+                                        <p>
+                                            the quick fox jumps over the lazy
+                                            dog
+                                        </p>
+                                        <span className="text-base">
+                                            Things on a very small scale ...
+                                        </span>
+                                    </span>
+                                </div>
+                                <div className="flex gap-4">
+                                    <span>
+                                        {" "}
+                                        <MdSpeed className="inline text-blue-400 text-3xl" />
+                                    </span>
+                                    <span>
+                                        <p>
+                                            the quick fox jumps over the lazy
+                                            dog
+                                        </p>
+                                        <span className="text-base">
+                                            Things on a very small scale ...
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
