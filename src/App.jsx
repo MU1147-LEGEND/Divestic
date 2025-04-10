@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { RiMenu3Fill } from "react-icons/ri";
+import mobileCover from "./assets/hero-cover/mobile-cover.png";
+import desktopCover from "./assets/hero-cover/desktop-cover.png";
+
 
 const App = () => {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -69,26 +72,40 @@ const App = () => {
                 </div>
             </header>
             {/* hero section */}
-            <section
+            {/* <section
                 id="hero"
-                className="relative hero-bg text-white h-[90vh]"
-            >
+                className="relative text-white h-[90vh] bg-cover bg-bottom bg-no-repeat"
+                style={{
+                    backgroundImage: `url(${
+                        window.innerWidth >= 768 ? desktopCover : mobileCover
+                    })`,
+                }}
+            > */}
+            <section id="hero" className="relative text-white h-[90vh]">
+                <picture className="absolute inset-0 z-0 w-full h-full">
+                    <source media="(min-width: 768px)" srcSet={desktopCover} />
+                    <img
+                        src={mobileCover}
+                        alt="Hero"
+                        className="w-full h-full object-cover object-bottom"
+                    />
+                </picture>
                 {/* Overlay for background dimming */}
                 <div className="absolute w-full h-full bg-black/40 z-0"></div>
                 {/* content */}
-                <div className="z-10 relative w-10/12 m-auto text-center text-lg">
+                <div className="z-10 relative w-10/12 m-auto text-center md:text-left text-lg">
                     <div className="hero-headline ">
-                        <h1 className="inline-block text-4xl md:text-6xl font-semi-bold mt-[25%] md:mt-28 mb-8 w-3/4 leading-relaxed">
-                            Experts are here solve your business problem.
+                        <h1 className="inline-block text-4xl md:text-6xl font-semi-bold mt-[25%] md:mt-28 mb-8 w-3/4 md:w-1/2 leading-relaxed">
+                            Experts are here solve your <br /> business problem.
                         </h1>
                     </div>
                     <div className="hero-slogan mb-8">
-                        <p className="inline-block w-4/5">
+                        <p className="inline-block w-4/5 md:w-2/5">
                             We know how large object will act, but things on a
                             small scale just do not act the way.
                         </p>
                     </div>
-                    <div className="hero-buttons flex flex-col items-center gap-4">
+                    <div className="hero-buttons flex md:block md:space-x-8 flex-col items-center gap-4">
                         <button className="px-8 py-2 bg-orange-400 rounded-3xl transition-colors duration-300 border border-transparent hover:bg-transparent hover:border-white">
                             Get Quote Now
                         </button>
