@@ -447,7 +447,7 @@ const App = () => {
             {/* our branches */}
             <section
                 id="our-branches"
-                className="bg-[#252B42] text-white text-lg text-left z-10"
+                className="bg-[#252B42] text-white text-lg text-left z-10 "
             >
                 <div className="w-10/12 m-auto pt-10 md:flex items-center justify-between md:pb-96">
                     <div className="md:w-1/2 space-y-4">
@@ -466,120 +466,144 @@ const App = () => {
                         <img src={world} alt="world map" loading="lazy" />
                     </div>
                 </div>
-            </section>
-            {/* contact-form */}
-            <section id="contact-form" className="bg-white pb-10 absolute">
-                <form
+                {/* contact-form */}
+                <section
                     id="contact-form"
-                    className="md:w-4/6 m-auto bg-white text-black md:flex gap-6 justify-center items-center md:-mt-72 z-50"
+                    className="bg-white pb-4 md:absolute"
                 >
-                    <div className="md:w-2/5 m-auto md:h-[80vh] md:overflow-hidden">
-                        <img
-                            src={contact}
-                            alt="contact-team"
-                            loading="lazy"
-                            className=" md:h-full md:object-cover m-auto w-full"
-                        />
-                    </div>
+                    <form
+                        id="contact-form"
+                        className="md:w-4/6 m-auto bg-white text-black md:flex gap-6 justify-center items-center md:-mt-72 md:pb-24 z-50"
+                    >
+                        <div className="md:w-2/5 m-auto md:h-[80vh] md:overflow-hidden">
+                            <img
+                                src={contact}
+                                alt="contact-team"
+                                loading="lazy"
+                                className=" md:h-full md:object-cover m-auto w-full"
+                            />
+                        </div>
 
-                    <div className=" m-auto w-10/12 md:px-6">
-                        <h2 className="form-title text-3xl md:text-6xl font-semibold md:mt-28 mb-10 leading-snug text-[#252B42]">
-                            Get A Free Quote Here
-                        </h2>
+                        <div className=" m-auto w-10/12 md:px-6">
+                            <h2 className="form-title text-3xl md:text-6xl font-semibold md:mt-28 mb-10 leading-snug text-[#252B42]">
+                                Get A Free Quote Here
+                            </h2>
 
-                        <div className="gap-6">
-                            {/* Name Field */}
-                            <div>
-                                <label
-                                    htmlFor="name"
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                >
-                                    Name<span className="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    placeholder="Full Name"
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                />
-                            </div>
+                            <div className="gap-6">
+                                {/* Name Field */}
+                                <div>
+                                    <label
+                                        htmlFor="name"
+                                        className="block text-sm font-medium text-gray-700 mb-1"
+                                    >
+                                        Name
+                                        <span className="text-red-500">*</span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        placeholder="Full Name"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                    />
+                                </div>
 
-                            {/* Email Field */}
-                            <div>
-                                <label
-                                    htmlFor="Email"
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                >
-                                    Email<span className="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="email"
-                                    id="Email"
-                                    placeholder="free-palestine@gmail.com"
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                />
-                            </div>
+                                {/* Email Field */}
+                                <div>
+                                    <label
+                                        htmlFor="Email"
+                                        className="block text-sm font-medium text-gray-700 mb-1"
+                                    >
+                                        Email
+                                        <span className="text-red-500">*</span>
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="Email"
+                                        placeholder="free-palestine@gmail.com"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                    />
+                                </div>
 
-                            {/* Department Field */}
-                            <div className="md:col-span-2">
-                                <label
-                                    htmlFor="department"
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                >
-                                    Department
-                                    <span className="text-red-500">*</span>
-                                </label>
-                                <select
-                                    name="department"
-                                    id="department"
-                                    defaultValue=""
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                >
-                                    <option value="" disabled>
-                                        Select
-                                    </option>
-                                    <option value="Customer care">
-                                        Customer care
-                                    </option>
-                                    <option value="Call Center">
-                                        Call Center
-                                    </option>
-                                    <option value="Troubleshoot">
-                                        Troubleshoot
-                                    </option>
-                                </select>
-                                {/* time selection */}
-                                <label
-                                    htmlFor="Time"
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                >
-                                    Time
-                                    <span className="text-red-500">*</span>
-                                </label>
-                                <select
-                                    name="Time"
-                                    id="Time"
-                                    defaultValue=""
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                >
-                                    <option value="" disabled>
-                                        Select
-                                    </option>
-                                    <option value="Customer care">
-                                        4:00 PM Avalilable
-                                    </option>
-                                    <option value="Call Center">
-                                        6:00 PM Avalilable
-                                    </option>
-                                    <option value="Troubleshoot">
-                                        8:00 PM Avalilable
-                                    </option>
-                                </select>
+                                {/* Department Field */}
+                                <div className="md:col-span-2">
+                                    <label
+                                        htmlFor="department"
+                                        className="block text-sm font-medium text-gray-700 mb-1"
+                                    >
+                                        Department
+                                        <span className="text-red-500">*</span>
+                                    </label>
+                                    <select
+                                        name="department"
+                                        id="department"
+                                        defaultValue=""
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                    >
+                                        <option value="" disabled>
+                                            Select
+                                        </option>
+                                        <option value="Customer care">
+                                            Customer care
+                                        </option>
+                                        <option value="Call Center">
+                                            Call Center
+                                        </option>
+                                        <option value="Troubleshoot">
+                                            Troubleshoot
+                                        </option>
+                                    </select>
+                                    {/* time selection */}
+                                    <label
+                                        htmlFor="Time"
+                                        className="block text-sm font-medium text-gray-700 mb-1"
+                                    >
+                                        Time
+                                        <span className="text-red-500">*</span>
+                                    </label>
+                                    <select
+                                        name="Time"
+                                        id="Time"
+                                        defaultValue=""
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                    >
+                                        <option value="" disabled>
+                                            Select
+                                        </option>
+                                        <option value="Customer care">
+                                            4:00 PM Avalilable
+                                        </option>
+                                        <option value="Call Center">
+                                            6:00 PM Avalilable
+                                        </option>
+                                        <option value="Troubleshoot">
+                                            8:00 PM Avalilable
+                                        </option>
+                                    </select>
+                                </div>
+                                <button className="bg-[#FFA62B] text-white w-full mt-8 py-2 rounded-lg">
+                                    Book Appointment
+                                </button>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </section>
             </section>
+            {/* filler */}
+            <div className="hidden md:block h-[70vh]"></div>
+            {/* filler */}
+
+            {/* footer */}
+            <footer className="relative pt-10 z-50">
+                <div className="footer-main">
+                    <div className="get-in-touch"></div>
+                    <div className="company-info"></div>
+                    <div className="features"></div>
+                    <div className="resources"></div>
+                </div>
+                <div className="footer-bottom bg-[#252B42]">
+                    <p>Made With Love By Figmaland All Right Reserved</p>
+                </div>
+            </footer>
         </>
     );
 };
