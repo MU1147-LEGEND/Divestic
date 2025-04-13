@@ -14,7 +14,7 @@
 
 @layer components {
   .link{
-    @apply hover:text-white/80;
+    @apply hover:text-white/80 no-underline;
   }
   .link::after{
     @apply content-[''] block w-0 h-[2px] bg-white/20 transition-all duration-500 ease-in-out;

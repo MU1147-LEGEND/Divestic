@@ -81,7 +81,7 @@ const App = () => {
                     </div>
                 </div>
                 <div
-                    className={`${"menu transition-all duration-300 h-0 flex flex-col items-center justify-around text-lg md:hidden"} ${
+                    className={`${"transition-all duration-300 h-0 flex flex-col items-center justify-around text-lg md:hidden"} ${
                         isOpenMenu ? "h-[300px] opacity-100" : "h-0 opacity-0"
                     }`}
                 >
