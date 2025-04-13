@@ -13,28 +13,31 @@ import { MdSpeed } from "react-icons/md";
 import person from "./assets/images/person.png";
 import teamCo from "./assets/images/team-co.png";
 import teamCEO from "./assets/images/team-ceo.png";
-
+import world from "./assets/images/world.png";
+import contact from "./assets/images/contact-team.png";
 
 const App = () => {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
-    useEffect(() => {
-        const carousel = document.querySelector(".testimonial-cards .carousel");
-        let scrollAmount = 0;
-        const slideWidth = carousel.offsetWidth;
 
-        const autoplay = setInterval(() => {
-            if (carousel.scrollLeft + slideWidth >= carousel.scrollWidth) {
-                // Go back to start
-                carousel.scrollTo({ left: 0, behavior: "smooth" });
-                scrollAmount = 0;
-            } else {
-                scrollAmount += slideWidth;
-                carousel.scrollTo({ left: scrollAmount, behavior: "smooth" });
-            }
-        }, 1000); // Change every 1 second
+    // carousel slider auto move
+    // useEffect(() => {
+    //     const carousel = document.querySelector(".testimonial-cards .carousel");
+    //     let scrollAmount = 0;
+    //     const slideWidth = carousel.offsetWidth;
 
-        return () => clearInterval(autoplay); // Cleanup on unmount
-    }, []);
+    //     const autoplay = setInterval(() => {
+    //         if (carousel.scrollLeft + slideWidth >= carousel.scrollWidth) {
+    //             // Go back to start
+    //             carousel.scrollTo({ left: 0, behavior: "smooth" });
+    //             scrollAmount = 0;
+    //         } else {
+    //             scrollAmount += slideWidth;
+    //             carousel.scrollTo({ left: scrollAmount, behavior: "smooth" });
+    //         }
+    //     }, 1000); // Change every 1 second
+
+    //     return () => clearInterval(autoplay); // Cleanup on unmount
+    // }, []);
 
     return (
         <>
@@ -200,16 +203,18 @@ const App = () => {
                             mechanics
                         </p>
                     </div>
-                    <div className="flex flex-col md:flex-row md:gap-20 text-center p-3">
+                    <div className="flex flex-col lg:flex-row md:gap-20 text-center p-3">
                         <img
                             src={cardImage}
                             alt="card-item"
                             className="text-center m-auto md:hidden"
+                            loading="lazy"
                         />
                         <img
                             src={cardImageDesktop}
                             alt="card-item"
                             className="text-center m-auto hidden md:block"
+                            loading="lazy"
                         />
                         <div className="most-trusted mt-16 pb-6 text-left">
                             <h2 className="text-4xl font-semibold w-4/5 mb-6">
@@ -274,11 +279,12 @@ const App = () => {
                     </div>
                     <div className="testimonial-cards w-full">
                         <div className="carousel flex-row rounded-box">
-                            <div className="carousel-item w-full text-black bg-white py-4">
+                            <div className=" carousel-item  w-full text-black bg-white py-4">
                                 <img
                                     src={person}
                                     className="w-[100px] h-[100px] rounded-full relative top-8 space-x-3"
                                     alt="Tailwind CSS Carousel component"
+                                    loading="lazy"
                                 />
                                 <div className="pl-4">
                                     <h3 className="text-3xl font-bold py-2 pt-10">
@@ -298,11 +304,12 @@ const App = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="carousel-item w-full text-black bg-white py-4">
+                            <div className=" carousel-item w-full text-black bg-white py-4">
                                 <img
                                     src={person}
                                     className="w-[100px] h-[100px] rounded-full relative top-8 space-x-3"
                                     alt="Tailwind CSS Carousel component"
+                                    loading="lazy"
                                 />
                                 <div className="pl-4">
                                     <h3 className="text-3xl font-bold py-2 pt-10">
@@ -322,11 +329,12 @@ const App = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="hidden md:flex carousel-item w-full text-black bg-white py-4">
+                            <div className=" hidden md:flex carousel-item w-full text-black bg-white py-4">
                                 <img
                                     src={person}
                                     className="w-[100px] h-[100px] rounded-full relative top-8 space-x-3"
                                     alt="Tailwind CSS Carousel component"
+                                    loading="lazy"
                                 />
                                 <div className="pl-4">
                                     <h3 className="text-3xl font-bold py-2 pt-10">
@@ -353,7 +361,7 @@ const App = () => {
             {/* meet our team */}
             <section
                 id="meet-our-team"
-                className="bg-[#16697A] text-white text-lg pb-20"
+                className="bg-[#252B42] text-white text-lg pb-20"
             >
                 <div className="w-10/12 m-auto pt-10">
                     <div className="head-slogan text-center">
@@ -373,6 +381,7 @@ const App = () => {
                                     src={teamCo}
                                     className="w-[200px] h-[200px] rounded-full object-cover"
                                     alt="Tailwind CSS Carousel component"
+                                    loading="lazy"
                                 />
                                 <div className="text-center">
                                     <h4 className="text-[#FFA62B] mt-3 font-semibold">
@@ -393,6 +402,7 @@ const App = () => {
                                     src={teamCEO}
                                     className="w-[200px] h-[200px] rounded-full object-cover"
                                     alt="Tailwind CSS Carousel component"
+                                    loading="lazy"
                                 />
                                 <div className="text-center">
                                     <h4 className="text-[#FFA62B] mt-3 font-semibold">
@@ -414,6 +424,7 @@ const App = () => {
                                     src={teamCo}
                                     className="w-[200px] h-[200px] rounded-full object-cover"
                                     alt="Tailwind CSS Carousel component"
+                                    loading="lazy"
                                 />
                                 <div className="text-center">
                                     <h4 className="text-[#FFA62B] mt-3 font-semibold">
@@ -432,6 +443,142 @@ const App = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+            {/* our branches */}
+            <section
+                id="our-branches"
+                className="bg-[#252B42] text-white text-lg text-left z-10"
+            >
+                <div className="w-10/12 m-auto pt-10 md:flex items-center justify-between md:pb-96">
+                    <div className="md:w-1/2 space-y-4">
+                        <h2 className="inline-block text-[2rem] md:text-6xl font-semibold md:mt-28 mb-8 leading-normal">
+                            We Have Branches All Over The World{" "}
+                        </h2>
+                        <p>
+                            The gradual accumulation of information about atomic
+                            and small-scale behaviour during the first quarter
+                            of the 20th century, which gave some indications
+                            about how small things do behave, produced an
+                            increasing confusion which was Heisenberg, and Born.
+                        </p>
+                    </div>
+                    <div className="py-20">
+                        <img src={world} alt="world map" loading="lazy" />
+                    </div>
+                </div>
+            </section>
+            {/* contact-form */}
+            <section id="contact-form" className="bg-white pb-10 absolute">
+                <form
+                    id="contact-form"
+                    className="md:w-4/6 m-auto bg-white text-black md:flex gap-6 justify-center items-center md:-mt-72 z-50"
+                >
+                    <div className="md:w-2/5 m-auto md:h-[80vh] md:overflow-hidden">
+                        <img
+                            src={contact}
+                            alt="contact-team"
+                            loading="lazy"
+                            className=" md:h-full md:object-cover m-auto w-full"
+                        />
+                    </div>
+
+                    <div className=" m-auto w-10/12 md:px-6">
+                        <h2 className="form-title text-3xl md:text-6xl font-semibold md:mt-28 mb-10 leading-snug text-[#252B42]">
+                            Get A Free Quote Here
+                        </h2>
+
+                        <div className="gap-6">
+                            {/* Name Field */}
+                            <div>
+                                <label
+                                    htmlFor="name"
+                                    className="block text-sm font-medium text-gray-700 mb-1"
+                                >
+                                    Name<span className="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    placeholder="Full Name"
+                                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                />
+                            </div>
+
+                            {/* Email Field */}
+                            <div>
+                                <label
+                                    htmlFor="Email"
+                                    className="block text-sm font-medium text-gray-700 mb-1"
+                                >
+                                    Email<span className="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="email"
+                                    id="Email"
+                                    placeholder="free-palestine@gmail.com"
+                                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                />
+                            </div>
+
+                            {/* Department Field */}
+                            <div className="md:col-span-2">
+                                <label
+                                    htmlFor="department"
+                                    className="block text-sm font-medium text-gray-700 mb-1"
+                                >
+                                    Department
+                                    <span className="text-red-500">*</span>
+                                </label>
+                                <select
+                                    name="department"
+                                    id="department"
+                                    defaultValue=""
+                                    className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                >
+                                    <option value="" disabled>
+                                        Select
+                                    </option>
+                                    <option value="Customer care">
+                                        Customer care
+                                    </option>
+                                    <option value="Call Center">
+                                        Call Center
+                                    </option>
+                                    <option value="Troubleshoot">
+                                        Troubleshoot
+                                    </option>
+                                </select>
+                                {/* time selection */}
+                                <label
+                                    htmlFor="Time"
+                                    className="block text-sm font-medium text-gray-700 mb-1"
+                                >
+                                    Time
+                                    <span className="text-red-500">*</span>
+                                </label>
+                                <select
+                                    name="Time"
+                                    id="Time"
+                                    defaultValue=""
+                                    className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                >
+                                    <option value="" disabled>
+                                        Select
+                                    </option>
+                                    <option value="Customer care">
+                                        4:00 PM Avalilable
+                                    </option>
+                                    <option value="Call Center">
+                                        6:00 PM Avalilable
+                                    </option>
+                                    <option value="Troubleshoot">
+                                        8:00 PM Avalilable
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </section>
         </>
     );
