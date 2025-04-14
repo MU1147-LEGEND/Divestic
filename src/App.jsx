@@ -10,6 +10,10 @@ import cardImage from "./assets/images/card-item.png";
 import cardImageDesktop from "./assets/images/card-item-desktop.png";
 import { RiTeamLine } from "react-icons/ri";
 import { MdSpeed } from "react-icons/md";
+import { IoLogoFacebook } from "react-icons/io";
+import { IoLogoInstagram } from "react-icons/io5";
+import { IoLogoTwitter } from "react-icons/io5";
+import { IoLogoYoutube } from "react-icons/io5";
 import person from "./assets/images/person.png";
 import teamCo from "./assets/images/team-co.png";
 import teamCEO from "./assets/images/team-ceo.png";
@@ -593,15 +597,62 @@ const App = () => {
             {/* filler */}
 
             {/* footer */}
-            <footer className="relative pt-10 z-50">
-                <div className="footer-main">
-                    <div className="get-in-touch"></div>
-                    <div className="company-info"></div>
-                    <div className="features"></div>
-                    <div className="resources"></div>
+            <footer className="relative pt-10 z-50 text-white bg-[#252B42] m-auto">
+                <div className="footer-main w-10/12 m-auto md:flex gap-4 items-center justify-between">
+                    <div className="get-in-touch flex flex-col item-center justify-center gap-4">
+                        <h3 className="text-3xl font-semibold">Get In Touch</h3>
+                        <p>the quick fox jumps over the lazy dog</p>
+                        <div className="social-icons flex items-center gap-3.5 text-xl">
+                            <span>
+                                {" "}
+                                <IoLogoFacebook className="inline text-[#335BF5]" />{" "}
+                            </span>
+                            <span>
+                                {" "}
+                                <IoLogoInstagram className="inline text-[#E51F5A]" />{" "}
+                            </span>
+                            <span>
+                                {" "}
+                                <IoLogoTwitter className="inline text-[#21A6DF]" />{" "}
+                            </span>
+                            <span>
+                                {" "}
+                                <IoLogoYoutube className="inline text-[#E42F08]" />{" "}
+                            </span>
+                        </div>
+                    </div>
+                    <div className="company-info ">
+                        <h3 className="text-3xl font-semibold">Company Info</h3>
+                        <div className="flex flex-col item-center justify-center">
+                            <span>About Us</span>
+                            <span>Carrier</span>
+                            <span>We Are Hiring</span>
+                            <span>Blog</span>
+                        </div>
+                    </div>
+                    <div className="Features ">
+                        <h3 className="text-3xl font-semibold">Features</h3>
+                        <div className="flex flex-col item-center justify-center">
+                            <span>Business Marketing</span>
+                            <span>User Analytics</span>
+                            <span>Live Chat</span>
+                            <span>Support</span>
+                        </div>
+                    </div>
+                    <div className="resources ">
+                        <h3 className="text-3xl font-semibold">Resources</h3>
+                        <div className="flex flex-col item-center justify-center">
+                            <span>IOS & Android</span>
+                            <span>Watch a Demo</span>
+                            <span>Customers</span>
+                            <span>API</span>
+                        </div>
+                    </div>
                 </div>
-                <div className="footer-bottom bg-[#252B42]">
-                    <p>Made With Love By Figmaland All Right Reserved</p>
+                <div className="footer-bottom  bottom-0 right-0 left-0 text-center bg-[#384163] py-6">
+                    <p className="opacity-75 ">
+                        Made With Love By Figmaland All Right Reserved
+                    </p>
                 </div>
             </footer>
         </>
