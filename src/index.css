@@ -1,6 +1,53 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@plugin 'daisyui';
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+.link{
+  @apply no-underline;
+}
+@utility link {
+  &:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+  }
+  &::after {
+    @apply content-[''] block w-0 h-[2px] bg-white/20 transition-all duration-500 ease-in-out;
+  }
+  &:hover::after {
+    @apply bg-white/80 w-full;
+  }
+}
+
+@utility hero-bg {
+  @apply bg-[url('src/assets/hero-cover/mobile-cover.png')] md:bg-[url('src/assets/hero-cover/desktop-cover.png')] bg-cover bg-bottom bg-no-repeat;
+}
+
+@utility why-cards {
+  @apply transition-all duration-500 ease-in-out;
+  &::before {
+    @apply content-[''] block absolute top-0 left-0 rounded-lg w-0 h-full bg-green-500/20 transition-all duration-500 ease-in-out;
+  }
+  &:hover::before {
+    @apply bg-green-400/30 w-full;
+  }
+}
 
 @layer base {
   html {
@@ -8,30 +55,5 @@
   }
   body {
     @apply md:bg-[#252B42]
-  }
-}
-
-
-@layer components {
-  .link{
-    @apply hover:text-white/80 no-underline;
-  }
-  .link::after{
-    @apply content-[''] block w-0 h-[2px] bg-white/20 transition-all duration-500 ease-in-out;
-  }
-  .link:hover::after{
-    @apply bg-white/80 w-full ;
-  }
-  .hero-bg{
-    @apply bg-[url('src/assets/hero-cover/mobile-cover.png')] md:bg-[url('src/assets/hero-cover/desktop-cover.png')] bg-cover bg-bottom bg-no-repeat;
-  }
-  .why-cards{
-    @apply transition-all duration-500 ease-in-out;
-  }
-  .why-cards::before{
-    @apply content-[''] block absolute top-0 left-0 rounded-lg w-0 h-full bg-green-500/20 transition-all duration-500 ease-in-out;
-  }
-  .why-cards:hover::before{
-    @apply bg-green-400/30 w-full ;
   }
 }
