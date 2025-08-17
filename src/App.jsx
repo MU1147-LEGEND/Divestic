@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { RiMenu3Fill } from "react-icons/ri";
@@ -600,7 +600,9 @@ const App = () => {
             <footer className="relative pt-10 z-50 text-white bg-[#252B42] m-auto">
                 <div className="footer-main w-10/12 m-auto md:flex gap-4 py-4 items-center justify-between">
                     <div className="get-in-touch flex flex-col item-center justify-around p-2 gap-4">
-                        <h3 className="text-3xl font-semibold mb-4">Get In Touch</h3>
+                        <h3 className="text-3xl font-semibold mb-4">
+                            Get In Touch
+                        </h3>
                         <p>the quick fox jumps over the lazy dog</p>
                         <div className="social-icons flex items-center gap-3.5 text-xl">
                             <span>
@@ -622,7 +624,9 @@ const App = () => {
                         </div>
                     </div>
                     <div className="company-info ">
-                        <h3 className="text-3xl font-semibold mb-4">Company Info</h3>
+                        <h3 className="text-3xl font-semibold mb-4">
+                            Company Info
+                        </h3>
                         <div className="flex flex-col item-center justify-center">
                             <span>About Us</span>
                             <span>Carrier</span>
@@ -631,7 +635,9 @@ const App = () => {
                         </div>
                     </div>
                     <div className="Features ">
-                        <h3 className="text-3xl font-semibold mb-4">Features</h3>
+                        <h3 className="text-3xl font-semibold mb-4">
+                            Features
+                        </h3>
                         <div className="flex flex-col item-center justify-center">
                             <span>Business Marketing</span>
                             <span>User Analytics</span>
@@ -640,7 +646,9 @@ const App = () => {
                         </div>
                     </div>
                     <div className="resources ">
-                        <h3 className="text-3xl font-semibold mb-4">Resources</h3>
+                        <h3 className="text-3xl font-semibold mb-4">
+                            Resources
+                        </h3>
                         <div className="flex flex-col item-center justify-center">
                             <span>IOS & Android</span>
                             <span>Watch a Demo</span>
